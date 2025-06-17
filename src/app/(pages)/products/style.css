@@ -1,0 +1,9 @@
+.mask-lines {
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--color-secondary),
+        var(--color-secondary) 0.5px,
+        transparent 1px,
+        transparent 10px
+    );
+}

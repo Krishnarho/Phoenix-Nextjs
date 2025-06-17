@@ -28,9 +28,9 @@
 
 @keyframes animate {
     0% {
-        transform: translatey(-30%);
+        transform: translateY(-30%);
     }
     100% {
-        transform: translatey(0%);
+        transform: translateY(0%);
     }
 }

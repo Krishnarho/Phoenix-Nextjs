@@ -12,6 +12,8 @@ import {
 import { MenuIcon } from "lucide-react";
 import { NavLink } from "./header";
 import Link from "next/link";
+import { motion } from "motion/react";
+import { div } from "motion/react-client";
 
 type NavLinkProps = {
     navLinks: NavLink[];
@@ -25,23 +27,35 @@ function MobileNav({ navLinks }: NavLinkProps) {
                     <MenuIcon />
                 </SheetTrigger>
                 <SheetContent side="left" className="w-full sm:w-[540px]">
-                    <SheetHeader>
+                    <SheetHeader className="mt-2">
                         <SheetTitle>Navigation</SheetTitle>
                         <SheetDescription className="sr-only">
                             Link to pages
                         </SheetDescription>
                     </SheetHeader>
                     <nav className="grid gap-2">
-                        {navLinks.map((link) => {
+                        {navLinks.map((link, index) => {
                             return (
-                                <SheetClose asChild key={link.name}>
-                                    <Link
-                                        href={link.path}
-                                        className="px-4 py-1"
-                                    >
-                                        {link.name}
-                                    </Link>
-                                </SheetClose>
+                                <motion.div
+                                    key={link.name}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 100,
+                                        damping: 25,
+                                        delay: 0.7 + index * 0.2,
+                                    }}
+                                >
+                                    <SheetClose asChild>
+                                        <Link
+                                            href={link.path}
+                                            className="px-4 py-1"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </SheetClose>
+                                </motion.div>
                             );
                         })}
                     </nav>

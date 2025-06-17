@@ -1,6 +1,8 @@
 import Image from "next/image";
 import "./style.css";
 
+import * as motion from "motion/react-client";
+
 function Home() {
     return (
         <>
@@ -22,7 +24,18 @@ function Home() {
                 </div>
             </section>
             <section id="home-content" className="border-y">
-                <div className="container max-w-5xl text-center px-2 lg:p-0 border-x">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 40,
+                        damping: 25,
+                        delay: 1.3,
+                        duration: 1.5,
+                    }}
+                    className="container text-center px-2 lg:p-0 border-x"
+                >
                     <h1 className="font-bold text-[clamp(1.875rem,4vw,5rem)] uppercase text-orange-600 tracking-wide">
                         Coming soon
                     </h1>
@@ -32,7 +45,7 @@ function Home() {
                     <p className="italic text-sky-500 font-semibold pb-[0.67em]">
                         +91 9769680485 / sales@phoenixglobal.co.in
                     </p>
-                </div>
+                </motion.div>
             </section>
         </>
     );

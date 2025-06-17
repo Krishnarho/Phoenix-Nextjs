@@ -1,8 +1,11 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLink } from "./header";
 import { cn } from "@/lib/utils";
+
+import { motion } from "motion/react";
 
 type NavLinkProps = {
     navLinks: NavLink[];
@@ -11,22 +14,39 @@ type NavLinkProps = {
 function MainNav({ navLinks }: NavLinkProps) {
     const pathName = usePathname();
     return (
-        <nav className="hidden lg:flex items-center gap-2">
-            {navLinks.map((link) => {
+        <nav className="hidden lg:flex space-x-4 items-center gap-2">
+            {navLinks.map((link, index) => {
                 const isActive =
                     pathName === link.path ||
                     (pathName.startsWith(link.path) && link.path !== "/");
                 return (
-                    <Link
+                    <motion.div
                         key={link.name}
-                        href={link.path}
-                        className={cn(
-                            "cursor-pointer py-1.5 px-3 hover:bg-secondary hover:text-secondary-foreground rounded-lg",
-                            { "bg-secondary": isActive }
-                        )}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 100,
+                            damping: 25,
+                            delay: 0.7 + index * 0.2,
+                        }}
                     >
-                        {link.name}
-                    </Link>
+                        <Link
+                            href={link.path}
+                            className={cn(
+                                "cursor-pointer text-sm hover:text-orange-500 rounded-lg relative group",
+                                { "text-orange-500": isActive }
+                            )}
+                        >
+                            {link.name}
+                            <span
+                                className={cn(
+                                    "absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full bg-orange-500 transition-all duration-300",
+                                    { "w-full": isActive }
+                                )}
+                            ></span>
+                        </Link>
+                    </motion.div>
                 );
             })}
         </nav>
