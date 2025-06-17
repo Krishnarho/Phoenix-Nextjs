@@ -23,7 +23,10 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section id="home-content" className="border-y">
+            <section
+                id="home-content"
+                className="border-y border-muted-foreground/20"
+            >
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -34,7 +37,7 @@ function Home() {
                         delay: 1.3,
                         duration: 1.5,
                     }}
-                    className="container text-center px-2 lg:p-0 border-x"
+                    className="container text-center px-2 lg:p-0 border-x border-muted-foreground/20"
                 >
                     <h1 className="font-bold text-[clamp(1.875rem,4vw,5rem)] uppercase text-orange-600 tracking-wide">
                         Coming soon
