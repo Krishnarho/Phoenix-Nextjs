@@ -1,7 +1,7 @@
 "use client";
 
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import { MouseEventHandler, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const CustomCursor = () => {

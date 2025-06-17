@@ -13,7 +13,6 @@ import { MenuIcon } from "lucide-react";
 import { NavLink } from "./header";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { div } from "motion/react-client";
 
 type NavLinkProps = {
     navLinks: NavLink[];
