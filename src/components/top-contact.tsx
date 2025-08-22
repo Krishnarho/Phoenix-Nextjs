@@ -10,12 +10,9 @@ const TopContact = () => {
     return (
         <>
             <div
-                className={cn(
-                    "w-full h-auto text-xs bg-secondary transition-all duration-500 ease-in-out",
-                    {
-                        "h-0": !topBar,
-                    }
-                )}
+                className={cn("w-full h-auto text-xs bg-secondary transition-all duration-500 ease-in-out", {
+                    "h-0": !topBar,
+                })}
             >
                 <ul className="w-fit mx-auto flex gap-4">
                     <li className="flex gap-2 items-center">

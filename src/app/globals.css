@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -122,7 +126,19 @@
         @apply scroll-smooth;
     }
     body {
-        @apply relative bg-background text-foreground overflow-x-clip;
+        @apply relative bg-background text-foreground overflow-x-clip overflow-y-scroll;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h5 {
+        @apply text-balance text-orange-600;
+    }
+
+    p {
+        @apply text-pretty;
     }
 }
 
@@ -132,5 +148,16 @@
     }
     .flex-center {
         @apply flex justify-center items-center;
+    }
+    .grid-products {
+        @apply grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+    }
+}
+
+/* Force-hide swiper nav buttons on small screens */
+@media (max-width: 767px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
     }
 }

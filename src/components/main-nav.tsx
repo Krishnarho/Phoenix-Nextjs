@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NavLink } from "./header";
 import { cn } from "@/lib/utils";
+import { NavLink } from "@/data/nav-links";
 
 import { motion } from "motion/react";
 
@@ -16,9 +16,7 @@ function MainNav({ navLinks }: NavLinkProps) {
     return (
         <nav className="hidden lg:flex space-x-4 items-center gap-2">
             {navLinks.map((link, index) => {
-                const isActive =
-                    pathName === link.path ||
-                    (pathName.startsWith(link.path) && link.path !== "/");
+                const isActive = pathName === link.path || (pathName.startsWith(link.path) && link.path !== "/");
                 return (
                     <motion.div
                         key={link.name}
@@ -33,10 +31,9 @@ function MainNav({ navLinks }: NavLinkProps) {
                     >
                         <Link
                             href={link.path}
-                            className={cn(
-                                "cursor-pointer text-sm hover:text-orange-500 rounded-lg relative group",
-                                { "text-orange-500": isActive }
-                            )}
+                            className={cn("cursor-pointer font-semibold hover:text-orange-500  relative group", {
+                                "text-orange-500": isActive,
+                            })}
                         >
                             {link.name}
                             <span

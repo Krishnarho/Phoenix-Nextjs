@@ -10,7 +10,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
-import { NavLink } from "./header";
+import { NavLink } from "@/data/nav-links";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -28,9 +28,7 @@ function MobileNav({ navLinks }: NavLinkProps) {
                 <SheetContent side="left" className="w-full sm:w-[540px]">
                     <SheetHeader className="mt-2">
                         <SheetTitle>Navigation</SheetTitle>
-                        <SheetDescription className="sr-only">
-                            Link to pages
-                        </SheetDescription>
+                        <SheetDescription className="sr-only">Link to pages</SheetDescription>
                     </SheetHeader>
                     <nav className="grid gap-2">
                         {navLinks.map((link, index) => {
@@ -47,10 +45,7 @@ function MobileNav({ navLinks }: NavLinkProps) {
                                     }}
                                 >
                                     <SheetClose asChild>
-                                        <Link
-                                            href={link.path}
-                                            className="px-4 py-1"
-                                        >
+                                        <Link href={link.path} className="px-4 py-1">
                                             {link.name}
                                         </Link>
                                     </SheetClose>
