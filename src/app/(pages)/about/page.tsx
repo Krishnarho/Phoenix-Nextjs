@@ -97,7 +97,7 @@ const About = () => {
                         Founded by a second-generation entrepreneur with extensive sales experience in the Indian
                         electrical market, having previously worked with industry leaders such as L&T and Raychem RPG.
                     </p>
-                    <p className="my-2">Strong Legacy in India’s Energy Sector.</p>
+                    <p className="my-2">{`Strong Legacy in India's Energy Sector.`}</p>
                     <p>
                         Headquartered in Maharashtra, rapidly expanding across India. Committed to Quality,
                         Sustainability, and Innovation.
@@ -154,7 +154,7 @@ const About = () => {
                             <li>Technical Consultation.</li>
                             <li>Installation & Maintenance Team</li>
                             <li>Liasioning with B2G Partners</li>
-                            <li>Expertise in India's Electrical Value Chain</li>
+                            <li>{`Expertise in India's Electrical Value Chain`}</li>
                             <li>Deep Understanding of Government Approval Cycles</li>
                             <li>Approved by 50+ top EPC consultants</li>
                             <li>Reliable Inventory via Large Warehouses</li>
