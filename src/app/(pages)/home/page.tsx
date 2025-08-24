@@ -7,22 +7,23 @@ import { featuredProducts } from "@/data/featured-products";
 
 function Home() {
     return (
-        <>
+        <main>
             <section id="home-hero">
                 <HeroSwiper />
             </section>
             <section
                 id="home-about"
-                className="px-4 py-8 md:py-16 bg-linear-[45deg,var(--background)_50%,oklch(64.6%_0.222_41.116)_50%] min-h-screen grid place-items-center"
+                className="px-2 py-3 lg:py-16 bg-linear-[45deg,var(--background)_50%,oklch(64.6%_0.222_41.116)_50%] min-h-screen grid place-items-center"
             >
                 <div className="container flex gap-4 flex-col lg:flex-row [&>*]:w-full lg:[&>*]:w-1/2">
-                    <div className="flex justify-center items-start  bg-slate-300/50">
+                    <div className="flex justify-center items-start">
                         <Image
-                            src="/images/phoenix-global.png"
+                            src="/images/about.jpg"
                             alt="About Phoenix Global"
-                            width={300}
-                            height={300}
-                            className="object-contain"
+                            width={800}
+                            height={600}
+                            sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
+                            className="object-cover max-h-96 object-ceter"
                         />
                     </div>
                     <div className="flex flex-col gap-4">
@@ -39,12 +40,15 @@ function Home() {
                         <p className="max-w-[65ch] text-pretty">
                             Since its inception, Phoenix Global has emerged as a trusted name in the electrical trading
                             and contracting sector, consistently expanding and achieving new milestones. As part of our
-                            growth journey, we became an authorized channel partner for leading industry names such as
-                            Raychem RPG Pvt. Ltd., Secure Meters Ltd., and Galaxy Transmission.
+                            growth journey, we became an authorized channel partner for{" "}
+                            <strong className="text-lg">Raychem RPG Pvt. Ltd.</strong>.
                         </p>
 
-                        <Button asChild className="rounded-none hover:bg-orange-600 w-fit mt-4">
-                            <Link href="#">
+                        <Button
+                            asChild
+                            className="rounded-none hover:bg-orange-600 hover:text-accent-foreground transition-colors ease-in duration-300 w-fit mt-4"
+                        >
+                            <Link href="/about">
                                 <span className="animate-bounce">Learn More</span>
                             </Link>
                         </Button>
@@ -71,7 +75,7 @@ function Home() {
                     <div className="grid-products mt-8">
                         {featuredProducts.map((product) => (
                             <div
-                                className="grid grid-rows-subgrid place-items-center gap-4 row-span-4 border border-ring rounded-lg hover:shadow-md hover:shadow-orange-600 hover:scale-105 transition-transform duration-300"
+                                className="grid grid-rows-subgrid place-items-center gap-4 row-span-4 border border-ring rounded-lg hover:shadow-md hover:shadow-orange-600 hover:scale-105 transition-transform duration-300 bg-secondary"
                                 key={product.id}
                             >
                                 <div className="relative w-full h-[12.5rem]">
@@ -99,7 +103,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-        </>
+        </main>
     );
 }
 

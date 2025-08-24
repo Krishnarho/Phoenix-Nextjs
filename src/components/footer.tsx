@@ -9,7 +9,7 @@ function Footer() {
         <section id="footer">
             <footer className="relative w-full text-white">
                 <div className="absolute inset-0 bg-[url('/images/footer-bg.jpg')] bg-cover bg-center z-0" />
-                <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 via-orange-800/40 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 via-orange-800/40 to-transparent z-10" />
 
                 <div className="container relative z-20 p-8">
                     <h3 className="text-center text-lg md:text-2xl font-semibold text-white mb-8">
@@ -35,8 +35,9 @@ function Footer() {
                                     </Button>
                                 </div>
                             </div>
-                            <p className="">
-                                By submitting this form, you agree to receiving communications via SMS/Messages from us.
+                            <p className="text-sm text-pretty">
+                                By submitting this form, you agree to receive communications via SMS/Messages & mail
+                                from us.
                             </p>
                         </form>
                         <div className="border-t lg:border-t-0 lg:border-l border-ring flex flex-col lg:items-end gap-4">
@@ -73,25 +74,26 @@ function Footer() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#"></a>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        className="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
-                                    >
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
-                                    </svg>
+                                    <a href="#">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            className="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
+                                        >
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
+                                        </svg>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="py-4 border-t border-ring z-20 relative">
-                    <p className="text-center ">@ 2025 Phoenix Global Private Limited. All Rights Reserved</p>
+                    <p className="text-center text-sm">@ 2025 Phoenix Global Private Limited. All Rights Reserved</p>
                 </div>
             </footer>
         </section>

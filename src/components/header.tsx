@@ -28,9 +28,7 @@ const Header = () => {
                             <h2 className="text-orange-600 font-bold text-xl sm:text-2xl tracking-wider">
                                 phoenix global
                             </h2>
-                            <p className=" uppercase text-center text-[0.6em] tracking-wider">
-                                We bring an electrical flare
-                            </p>
+                            <p className="uppercase text-bold text-center text-xs tracking-wider">Power your world</p>
                         </div>
                     </Link>
                 </motion.div>
