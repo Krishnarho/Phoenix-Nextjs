@@ -13,15 +13,17 @@ import {
 const AboutPage = () => {
     return (
         <>
-            <section id="about-banner" className="grid [&>*]:[grid-area:1/1] place-items-center w-full h-[50vh]">
-                <Image
-                    src="/images/about-bg.jpg"
-                    alt="about banner"
-                    fill
-                    priority
-                    sizes="100vw"
-                    className="object-cover w-full max-h-[50vh] object-right z-0"
-                />
+            <section id="about-banner" className="grid [&>*]:[grid-area:1/1] place-items-center">
+                <div className="relative w-full h-[50vh]">
+                    <Image
+                        src="/images/about-bg.jpg"
+                        alt="about banner"
+                        fill
+                        priority
+                        sizes="100vw"
+                        className="object-cover object-right z-0"
+                    />
+                </div>
                 <div className="w-full h-full bg-black/30 z-10"></div>
                 <div className="container z-20 pt-16 px-4 grid gap-4 mt-16 text-white">
                     <h1 className="text-3xl lg:text-5xl">Discover the World of Phoenix Global</h1>
