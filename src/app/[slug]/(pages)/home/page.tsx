@@ -48,7 +48,7 @@ function Home() {
                             asChild
                             className="rounded-none hover:bg-orange-600 hover:text-accent-foreground transition-colors ease-in duration-300 w-fit mt-4"
                         >
-                            <Link href="/about">
+                            <Link href="/about-phoenix-global">
                                 <span className="animate-bounce">Learn More</span>
                             </Link>
                         </Button>

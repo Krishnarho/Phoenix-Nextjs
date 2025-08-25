@@ -10,7 +10,7 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-const About = () => {
+const AboutPage = () => {
     return (
         <>
             <section id="about-banner" className="grid [&>*]:[grid-area:1/1] place-items-center w-full h-[50vh]">
@@ -112,7 +112,7 @@ const About = () => {
                         sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
                         className="object-cover max-h-96 object-ceter"
                     />
-                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[-4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background">
+                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background">
                         <h3 className="text-2xl md:text-3xl mb-4">Our Vision</h3>
                         <ul className="space-y-4">
                             <li>Expand across under-penetrated regions.</li>
@@ -139,7 +139,7 @@ const About = () => {
                         className="object-cover max-h-96 object-ceter"
                     />
                 </div>
-                <div className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2">
+                <div className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0">
                     <Image
                         src="/images/capabilities.jpg"
                         alt="About Phoenix Global"
@@ -148,7 +148,7 @@ const About = () => {
                         sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
                         className="object-cover max-h-96 object-ceter"
                     />
-                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[-4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background">
+                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background">
                         <h3 className="text-2xl md:text-3xl mb-4">Our Capabilities</h3>
                         <ul className="space-y-4">
                             <li>Technical Consultation.</li>
@@ -185,4 +185,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default AboutPage;
