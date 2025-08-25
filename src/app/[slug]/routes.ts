@@ -19,8 +19,8 @@ type RouteConfig = {
 export const routeConfig: RouteConfig[] = [
     { name: "Home", slug: "", nav: true, component: HomePage },
     { name: "About", slug: "about-phoenix-global", nav: false, component: AboutPage },
-    { name: "Products", slug: "our-products", nav: true, component: ProductPage },
-    { name: "Contact", slug: "contact-our-team", nav: true, component: ContactPage },
+    { name: "Products", slug: "#", nav: true, component: ProductPage },
+    { name: "Contact", slug: "#", nav: true, component: ContactPage },
 ];
 
 export const routeMap: Record<string, React.ComponentType> = Object.fromEntries(
