@@ -10,7 +10,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
-import { NavLink } from "@/data/nav-links";
+import { NavLink } from "@/constants/nav-links";
 import Link from "next/link";
 import { motion } from "motion/react";
 

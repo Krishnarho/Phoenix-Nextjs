@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 
 import * as motion from "motion/react-client";
 
-import { slides } from "@/data/hero-slides";
+import { slides } from "@/constants/hero-slides";
 
 export default function HeroSwiper() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -26,18 +26,18 @@ export default function HeroSwiper() {
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             speed={800}
             loop
-            className="mySwiper w-full h-screen"
+            className="mySwiper w-full h-[80vh] md:h-screen"
         >
             {slides.map((slide, index) => (
                 <SwiperSlide key={slide.id}>
-                    <div className="absolute inset-0 flex items-center justify-start w-full h-screen">
+                    <div className="absolute inset-0 flex items-center justify-start w-full h-[80vh] md:h-screen">
                         <Image
                             src={slide.image}
                             alt={slide.title}
                             fill
                             priority
                             sizes="100vw"
-                            className="object-cover w-full h-full mx-auto"
+                            className="object-cover mx-auto"
                         />
                         {activeIndex === index && (
                             <motion.div

@@ -1,7 +1,7 @@
-import HomePage from "./(pages)/home/page";
-import AboutPage from "./(pages)/AboutPage";
-import ProductPage from "./(pages)/products/page";
-import ContactPage from "./(pages)/ContactPage";
+import HomePage from "../(pages)/home/page";
+import AboutPage from "../(pages)/about-phoenix-global/page";
+import ProductPage from "../(pages)/products/page";
+import ContactPage from "../(pages)/contact-our-team/page";
 
 // export const routeMap: Record<string, React.ComponentType> = {
 //     "about-phoenix-global": AboutPage,

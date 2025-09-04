@@ -4,7 +4,7 @@ import MainNav from "./main-nav";
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
 import ScrollHeader from "./scroll-header";
-import { navLinks } from "@/data/nav-links";
+import { navLinks } from "@/constants/nav-links";
 
 import * as motion from "motion/react-client";
 

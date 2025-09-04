@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowBigRight } from "lucide-react";
-import { featuredProducts } from "@/data/featured-products";
+import { featuredProducts } from "@/constants/featured-products";
+import ClientScroll from "@/components/client";
 
 function Home() {
     return (
@@ -23,7 +24,7 @@ function Home() {
                             width={800}
                             height={600}
                             sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
-                            className="object-cover max-h-96 object-ceter"
+                            className="object-cover  max-h-72 md:max-h-96 object-ceter"
                         />
                     </div>
                     <div className="flex flex-col gap-4">
@@ -41,7 +42,10 @@ function Home() {
                             Since its inception, Phoenix Global has emerged as a trusted name in the electrical trading
                             and contracting sector, consistently expanding and achieving new milestones. As part of our
                             growth journey, we became an authorized channel partner for{" "}
-                            <strong className="text-lg">Raychem RPG Pvt. Ltd.</strong>.
+                            <strong className="text-lg">Raychem RPG Pvt. Ltd.</strong> and{" "}
+                            <strong className="text-lg">Nvent - Erico, Eriflex and Caddy </strong> while also expanding
+                            our reach as trusted traders <strong>for Secure Meters Ltd.</strong> and{" "}
+                            <strong>Galaxy Transmissions</strong>.
                         </p>
 
                         <Button
@@ -88,14 +92,14 @@ function Home() {
                                     />
                                 </div>
                                 <h3 className="text-lg font-semibold px-4">{product.title}</h3>
-                                <p className="place-self-start px-4 text-sm">{product.para}</p>
+                                <p className="place-self-start px-4 text-sm line-clamp-3">{product.para}</p>
                                 <Button
                                     asChild
                                     variant="ghost"
                                     className="w-fit hover:text-orange-600 hover:animate-out mb-4"
                                 >
-                                    <Link href={product.link}>
-                                        Learn More <ArrowBigRight />
+                                    <Link href={product.link} className="group">
+                                        Learn More <ArrowBigRight className="group-hover:animate-caret-blink" />
                                     </Link>
                                 </Button>
                             </div>
@@ -103,6 +107,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <ClientScroll />
         </main>
     );
 }
