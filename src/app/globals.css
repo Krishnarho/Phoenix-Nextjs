@@ -48,7 +48,7 @@
 
     --color-beige: oklch(0.96 0.0328 107);
 
-    --animate-infinite-scroll: infinite-scroll 30s linear infinite;
+    --animate-infinite-scroll: infinite-scroll 40s linear infinite;
     @keyframes infinite-scroll {
         from {
             transform: translateX(0);
@@ -160,7 +160,8 @@
         @apply flex justify-center items-center;
     }
     .grid-products {
-        @apply grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+        @apply grid gap-4;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
