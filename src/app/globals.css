@@ -133,7 +133,7 @@
         interpolate-size: allow-keywords;
     }
     html {
-        @apply scroll-smooth;
+        @apply scroll-smooth scroll-p-18;
     }
     body {
         @apply relative bg-background text-foreground overflow-x-clip overflow-y-scroll;
@@ -170,5 +170,16 @@
     .swiper-button-prev,
     .swiper-button-next {
         display: none !important;
+    }
+}
+
+#subMenu {
+    @starting-style {
+        height: 0;
+    }
+    & a:hover {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        text-decoration-color: oklch(70.5% 0.213 47.604);
     }
 }

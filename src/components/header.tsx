@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ModeToggle } from "./mode-toggle";
-import MainNav from "./main-nav";
+import DesktopNav from "./desktop-nav";
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
 import ScrollHeader from "./scroll-header";
@@ -11,7 +11,7 @@ import * as motion from "motion/react-client";
 const Header = () => {
     return (
         <ScrollHeader>
-            <div className="max-w-[90rem] h-18 px-2 mx-auto flex items-center justify-between">
+            <div className="max-w-[90rem] h-18 px-2 mx-auto flex justify-between items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -33,9 +33,9 @@ const Header = () => {
                     </Link>
                 </motion.div>
 
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center self-stretch">
                     {/* DESKTOP */}
-                    <MainNav navLinks={navLinks} />
+                    <DesktopNav navLinks={navLinks} />
 
                     {/* THEME */}
                     <ModeToggle />

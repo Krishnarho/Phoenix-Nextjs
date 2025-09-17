@@ -34,7 +34,7 @@ function MobileNav({ navLinks }: NavLinkProps) {
                         {navLinks.map((link, index) => {
                             return (
                                 <motion.div
-                                    key={link.name}
+                                    key={link.id}
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{
@@ -46,7 +46,7 @@ function MobileNav({ navLinks }: NavLinkProps) {
                                 >
                                     <SheetClose asChild>
                                         <Link href={link.path} className="px-4 py-1">
-                                            {link.name}
+                                            {link.nav}
                                         </Link>
                                     </SheetClose>
                                 </motion.div>

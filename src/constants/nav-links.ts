@@ -1,10 +1,48 @@
-export type NavLink = {
-    name: string;
+type SubSubNav = { nav: string; path: string };
+
+type SubNav = {
+    nav: string;
     path: string;
+    subSubNav?: SubSubNav[];
+};
+
+export type NavLink = {
+    id: string;
+    nav: string;
+    path: string;
+    subNav?: SubNav[];
 };
 
 export const navLinks: NavLink[] = [
-    { name: "Home", path: "/" },
-    { name: "Products", path: "#" },
-    { name: "Contact", path: "#" },
+    //{ id: "home", nav: "Home", path: "/" },
+    {
+        id: "home",
+        nav: "Company",
+        path: "/",
+        subNav: [
+            { nav: "Home Page", path: "/" },
+            {
+                nav: "About Us",
+                path: "/about-phoenix-global",
+                subSubNav: [
+                    { nav: "About Company", path: "/about-phoenix-global#aboutCompany" },
+                    { nav: "Our Vision", path: "/about-phoenix-global#aboutVision" },
+                    { nav: "Our Mission", path: "/about-phoenix-global#aboutMission" },
+                    { nav: "Our Clients", path: "/about-phoenix-global#aboutCLients" },
+                ],
+            },
+        ],
+    },
+    { id: "products", nav: "Products", path: "#" },
+    {
+        id: "i&a",
+        nav: "Industries & Applications",
+        path: "#",
+        subNav: [
+            { nav: "Energy", path: "#" },
+            { nav: "Oil & Gas", path: "#" },
+            { nav: "Industry", path: "#" },
+        ],
+    },
+    { id: "contact", nav: "Contact", path: "#" },
 ];

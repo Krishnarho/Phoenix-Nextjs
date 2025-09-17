@@ -22,7 +22,7 @@ const logos = [
 export default function ClientScroll() {
     const duplicateLogos = [...logos, ...logos];
     return (
-        <section id="client-logos" className="py-16 md:py-24 lg:py-48 bg-gray-300">
+        <section id="clients" className="py-16 md:py-24 lg:py-48 bg-gray-300">
             <div className="container">
                 <h2 className="text-[clamp(1.875rem,2.5vw,3rem)] font-bold text-center text-balance mb-4 md:mb-8">
                     Our Clients

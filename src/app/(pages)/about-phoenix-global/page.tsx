@@ -56,7 +56,7 @@ const AboutPage = () => {
                     <div className="flex justify-center items-start">
                         <Image
                             src="/images/about.jpg"
-                            alt="About Phoenix Global"
+                            alt=""
                             width={800}
                             height={600}
                             sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
@@ -103,7 +103,7 @@ const AboutPage = () => {
                         Sustainability, and Innovation.
                     </p>
                 </div>
-                <div className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2">
+                <div id="vision" className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2">
                     <Image
                         src="/images/vision.jpg"
                         alt="About Phoenix Global"
@@ -121,7 +121,10 @@ const AboutPage = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0 justify-end">
+                <div
+                    id="mission"
+                    className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0 justify-end"
+                >
                     <div className="shadow-2xl md:shadow-[-4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[-4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-mr-[10%] z-10 bg-background md:text-right">
                         <h3 className="text-2xl md:text-3xl mb-4">Our Mission</h3>
                         <ul className="space-y-4">
@@ -139,7 +142,10 @@ const AboutPage = () => {
                         className="object-cover max-h-96 object-ceter"
                     />
                 </div>
-                <div className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0">
+                <div
+                    id="capabilities"
+                    className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0"
+                >
                     <Image
                         src="/images/capabilities.jpg"
                         alt="About Phoenix Global"
