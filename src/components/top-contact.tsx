@@ -3,7 +3,7 @@
 import { Mail, PhoneCall, X } from "lucide-react";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { cn } from "@/app/_lib/utils";
+import { cn } from "@/lib/utils";
 
 const TopContact = () => {
     const [topBar, setTopBar] = useState<boolean>(true);

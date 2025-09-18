@@ -6,7 +6,7 @@ import { ArrowBigRight } from "lucide-react";
 import { featuredProducts } from "@/constants/featured-products";
 import Link from "next/link";
 import { useState } from "react";
-import { cn } from "@/app/_lib/utils";
+import { cn } from "@/lib/utils";
 
 function Featured() {
     const [featuredItem, setFeaturedItem] = useState("products");

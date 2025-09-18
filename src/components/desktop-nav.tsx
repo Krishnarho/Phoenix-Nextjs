@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/app/_lib/utils";
+import { cn } from "@/lib/utils";
 import { NavLink } from "@/constants/nav-links";
 
 import { motion } from "motion/react";
