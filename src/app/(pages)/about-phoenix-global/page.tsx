@@ -51,7 +51,7 @@ const AboutPage = () => {
                     </Breadcrumb>
                 </div>
             </section>
-            <section id="about-content" className="px-2 py-8 lg:py-16">
+            <section id="introduction" className="px-2 py-8 lg:py-16">
                 <div className="container flex gap-4 flex-col lg:flex-row [&>*]:w-full lg:[&>*]:w-1/2">
                     <div className="flex justify-center items-start">
                         <Image
@@ -110,9 +110,9 @@ const AboutPage = () => {
                         width={800}
                         height={600}
                         sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
-                        className="object-cover max-h-96 object-ceter"
+                        className="object-cover max-h-96 object-ceter order-2 md:order-1"
                     />
-                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background">
+                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background order-1 md:order-2">
                         <h3 className="text-2xl md:text-3xl mb-4">Our Vision</h3>
                         <ul className="space-y-4">
                             <li>Expand across under-penetrated regions.</li>
@@ -152,9 +152,9 @@ const AboutPage = () => {
                         width={800}
                         height={600}
                         sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
-                        className="object-cover max-h-96 object-ceter"
+                        className="object-cover max-h-96 object-ceter order-2 md:order-1"
                     />
-                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background">
+                    <div className="shadow-2xl md:shadow-[4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-ml-[10%] bg-background order-1 md:order-2">
                         <h3 className="text-2xl md:text-3xl mb-4">Our Capabilities</h3>
                         <ul className="space-y-4">
                             <li>Technical Consultation.</li>

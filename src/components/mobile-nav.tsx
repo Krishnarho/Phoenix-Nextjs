@@ -14,13 +14,13 @@ type NavLinkProps = {
 
 function MobileNav({ navLinks }: NavLinkProps) {
     const [open, setOpen] = useState(false);
-    const [activeAccordion, setActiveAccordion] = useState<string | undefined>(undefined);
+    //const [activeAccordion, setActiveAccordion] = useState<string | "">("");
 
     return (
         <div className="lg:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
-                    <MenuIcon />
+                    <MenuIcon className="stroke-orange-500" />
                 </SheetTrigger>
                 <SheetContent side="left" className="w-full sm:w-[540px]">
                     <SheetHeader className="mt-2">
@@ -33,14 +33,13 @@ function MobileNav({ navLinks }: NavLinkProps) {
                         <Accordion
                             type="single"
                             collapsible
-                            value={activeAccordion}
-                            onValueChange={(value) => {
-                                setActiveAccordion(value);
-                            }}
+                            // value={activeAccordion}
+                            // onValueChange={(value) => {
+                            //     setActiveAccordion(value);
+                            // }}
                         >
                             {navLinks.map((link, index) => {
                                 const hasSubMenu = link.subNav && link.subNav.length > 0;
-
                                 return (
                                     <motion.div
                                         key={link.id}

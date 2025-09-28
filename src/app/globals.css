@@ -133,7 +133,7 @@
         interpolate-size: allow-keywords;
     }
     html {
-        @apply scroll-smooth scroll-p-18;
+        @apply scroll-smooth scroll-p-10;
     }
     body {
         @apply relative bg-background text-foreground overflow-x-clip overflow-y-scroll;
@@ -177,9 +177,15 @@
     @starting-style {
         height: 0;
     }
-    & a:hover {
+
+    a:hover {
         text-decoration: underline;
         text-underline-offset: 5px;
         text-decoration-color: oklch(70.5% 0.213 47.604);
     }
+}
+
+.show {
+    height: 400px;
+    transition-delay: 0;
 }

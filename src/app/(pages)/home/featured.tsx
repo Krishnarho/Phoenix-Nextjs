@@ -52,7 +52,7 @@ function Featured() {
                         .filter((item) => item.category === featuredItem)
                         .map((product) => (
                             <div
-                                className="grid grid-rows-subgrid place-items-center gap-4 row-span-4 border border-ring rounded-lg hover:shadow-md hover:shadow-orange-600 hover:scale-105 transition-transform duration-300 bg-secondary"
+                                className="grid grid-rows-subgrid place-items-center gap-4 row-span-4 border border-ring rounded-lg hover:shadow-md hover:shadow-orange-600 hover:scale-105 bg-secondary transition-transform duration-300"
                                 key={product.id}
                             >
                                 <div className="relative w-full h-[12.5rem]">

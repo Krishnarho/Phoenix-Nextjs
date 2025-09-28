@@ -21,6 +21,7 @@ function DesktopNav({ navLinks }: NavLinkProps) {
 
     // Delay submenu opening
     const handleMouseEnterMenu = (navId: string) => {
+        //setActiveNavId(navId);
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         timeoutRef.current = setTimeout(() => {
             setActiveNavId(navId);
@@ -29,6 +30,7 @@ function DesktopNav({ navLinks }: NavLinkProps) {
 
     // Hide submenu immediately
     const handleMouseLeaveMenu = () => {
+        //if (!subMenuHover) setActiveNavId(null);
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         timeoutRef.current = setTimeout(() => {
             if (!subMenuHover) setActiveNavId(null);
@@ -45,7 +47,7 @@ function DesktopNav({ navLinks }: NavLinkProps) {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         setActiveNavId(null);
     };
-    const hasSubMenu = navLinks.find((link) => link.id === activeNavId && link.subNav);
+    //const hasSubMenu = navLinks.find((link) => link.id === activeNavId && link.subNav);
     return (
         <>
             <nav className="hidden lg:flex space-x-4 items-center gap-2 h-full">
@@ -69,16 +71,17 @@ function DesktopNav({ navLinks }: NavLinkProps) {
                             <Link
                                 href={link.path}
                                 className={cn(
-                                    "cursor-pointer font-semibold hover:text-orange-500 h-full block flex-center relative group",
+                                    "cursor-pointer font-semibold hover:text-orange-500 h-full flex-center group flex-col",
                                     {
                                         "text-orange-500": isActive,
+                                        "ml-48": index === 0,
                                     }
                                 )}
                             >
                                 {link.nav}
                                 <span
                                     className={cn(
-                                        "absolute bottom-5 left-0 w-0 h-0.5 group-hover:w-full bg-orange-500 transition-all duration-300",
+                                        "w-0 h-0.5 group-hover:w-full bg-orange-500 transition-all self-start duration-300",
                                         { "w-full": isActive }
                                     )}
                                 ></span>
@@ -88,19 +91,18 @@ function DesktopNav({ navLinks }: NavLinkProps) {
                 })}
             </nav>
             {/* Submenu */}
-            {hasSubMenu && (
-                <div
-                    id="subMenu"
-                    className={cn(
-                        "absolute top-18 left-1/2 -translate-x-1/2 w-full max-w-7xl bg-background text-foreground shadow-sm dark:shadow-slate-700 z-40 h-0 transition-[height] duration-300 ease-in-out overflow-clip",
-                        { "h-auto": activeNavId }
-                    )}
-                    onMouseEnter={handleMouseEnterSubMenu}
-                    onMouseLeave={handleMouseLeaveSubMenu}
-                >
-                    <DesktopSubmenu navItemId={activeNavId} setNavItem={setActiveNavId} />
-                </div>
-            )}
+
+            <div
+                id="subMenu"
+                className={cn(
+                    "absolute top-18 left-1/2 -translate-x-1/2 w-full max-w-7xl bg-background text-foreground shadow-sm dark:shadow-slate-700 z-40 h-0 overflow-clip transition-[height] duration-500 ease-in-out",
+                    { "h-auto": activeNavId }
+                )}
+                onMouseEnter={handleMouseEnterSubMenu}
+                onMouseLeave={handleMouseLeaveSubMenu}
+            >
+                <DesktopSubmenu navItemId={activeNavId} setNavItem={setActiveNavId} />
+            </div>
         </>
     );
 }

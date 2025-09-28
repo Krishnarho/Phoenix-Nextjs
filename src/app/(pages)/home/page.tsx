@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ClientScroll from "@/components/client";
 import Featured from "./featured";
+import MostViewedProducts from "./most-viewed-products";
 
 function Home() {
     return (
@@ -59,6 +60,7 @@ function Home() {
                 </div>
             </section>
             <Featured />
+            <MostViewedProducts />
             <ClientScroll />
         </main>
     );

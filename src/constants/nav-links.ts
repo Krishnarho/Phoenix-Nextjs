@@ -18,17 +18,18 @@ export const navLinks: NavLink[] = [
     {
         id: "home",
         nav: "Company",
-        path: "/",
+        path: "",
         subNav: [
             { nav: "Home Page", path: "/" },
             {
                 nav: "About Us",
                 path: "/about-phoenix-global",
                 subSubNav: [
-                    { nav: "About Company", path: "/about-phoenix-global#aboutCompany" },
-                    { nav: "Our Vision", path: "/about-phoenix-global#aboutVision" },
-                    { nav: "Our Mission", path: "/about-phoenix-global#aboutMission" },
-                    { nav: "Our Clients", path: "/about-phoenix-global#aboutCLients" },
+                    { nav: "About Company", path: "/about-phoenix-global#introduction" },
+                    { nav: "Our Vision", path: "/about-phoenix-global#vision" },
+                    { nav: "Our Mission", path: "/about-phoenix-global#mission" },
+                    { nav: "Our Capabilities", path: "/about-phoenix-global#capabilities" },
+                    { nav: "Our Clients", path: "/about-phoenix-global#clients" },
                 ],
             },
         ],
