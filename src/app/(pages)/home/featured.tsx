@@ -14,10 +14,10 @@ function Featured() {
         <section id="home-featured" className="px-4 py-8 min-h-screen">
             <div className="container grid gap-12">
                 <div className="">
-                    <h2 className="text-[clamp(1.875rem,2.5vw,3rem)] text-center text-balance mb-4 md:mb-8">
+                    <h2 className="autoShow text-[clamp(1.875rem,2.5vw,3rem)] text-center text-balance mb-4 md:mb-8">
                         Featured Products
                     </h2>
-                    <p className="max-w-[85ch] text-pretty text-center mx-auto">
+                    <p className="autoShow max-w-[85ch] text-pretty text-center mx-auto">
                         Our featured product offerings in the electricity manufacturing sector focus on advanced power
                         distribution solutions designed to enhance efficiency, safety, and reliability across utility
                         and industrial applications. We specialize in high-performance cables & cables accessories,

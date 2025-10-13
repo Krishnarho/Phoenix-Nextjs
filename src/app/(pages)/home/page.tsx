@@ -28,17 +28,17 @@ function Home() {
                         />
                     </div>
                     <div className="flex flex-col gap-4">
-                        <h1 className="text-[clamp(1.875rem,2.5vw,3rem)] mt-8 lg:mt-0 text-balance">
+                        <h1 className="autoShow text-[clamp(1.875rem,2.5vw,3rem)] mt-8 lg:mt-0 text-balance">
                             Welcome to Phoenix Global
                         </h1>
-                        <p className="max-w-[65ch] text-pretty">
+                        <p className="autoShow max-w-[65ch] text-pretty">
                             The zest for entrepreneurship led to the formation of Phoenix Global. With a strong interest
                             in the energy sector, we recognized a growing demand for electrical products across key
                             domains such as Utilities, Renewable Energy, Industrial Infrastructure, Railways, Metro
                             Projects, and Ports. This insight paved a clear and promising path for us to establish our
                             presence in the industry.
                         </p>
-                        <p className="max-w-[65ch] text-pretty">
+                        <p className="autoShow max-w-[65ch] text-pretty">
                             Since its inception, Phoenix Global has emerged as a trusted name in the electrical trading
                             and contracting sector, consistently expanding and achieving new milestones. As part of our
                             growth journey, we became an authorized channel partner for{" "}

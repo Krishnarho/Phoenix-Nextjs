@@ -14,7 +14,7 @@ import ClientScroll from "@/components/client";
 const AboutPage = () => {
     return (
         <>
-            <section id="about-banner" className="grid [&>*]:[grid-area:1/1] place-items-center">
+            <section id="about" className="grid [&>*]:[grid-area:1/1] place-items-center">
                 <div className="relative w-full h-[50vh]">
                     <Image
                         src="/images/about-bg.jpg"
