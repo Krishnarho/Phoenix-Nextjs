@@ -91,7 +91,7 @@ const AboutPage = () => {
                 </div>
             </section>
             <section id="about-vision-mission" className="px-2">
-                <div className="container [&>p]:max-w-[80ch] text-pretty pb-8">
+                <div className="container [&>p]:max-w-[80ch] text-pretty pb-8 autoShow">
                     <h2 className="text-2xl md:text-3xl mb-4">About the company</h2>
                     <p>
                         Founded by an entrepreneur with extensive sales experience in the Indian electrical market,
@@ -103,7 +103,7 @@ const AboutPage = () => {
                         Sustainability, and Innovation.
                     </p>
                 </div>
-                <div id="vision" className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2">
+                <div id="vision" className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 autoShow">
                     <Image
                         src="/images/vision.jpg"
                         alt="About Phoenix Global"
@@ -123,7 +123,7 @@ const AboutPage = () => {
                 </div>
                 <div
                     id="mission"
-                    className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0 justify-end"
+                    className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0 justify-end autoShow"
                 >
                     <div className="shadow-2xl md:shadow-[-4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[-4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-mr-[10%] z-10 bg-background md:text-right">
                         <h3 className="text-2xl md:text-3xl mb-4">Our Mission</h3>
@@ -144,7 +144,7 @@ const AboutPage = () => {
                 </div>
                 <div
                     id="capabilities"
-                    className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0"
+                    className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0 autoShow"
                 >
                     <Image
                         src="/images/capabilities.jpg"

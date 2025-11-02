@@ -95,8 +95,8 @@ function DesktopNav({ navLinks }: NavLinkProps) {
             <div
                 id="subMenu"
                 className={cn(
-                    "absolute top-18 left-1/2 -translate-x-1/2 w-full max-w-7xl bg-background text-foreground shadow-sm dark:shadow-slate-700 z-40 h-0 overflow-clip transition-[height] duration-500 ease-in-out",
-                    { "h-auto": activeNavId }
+                    "absolute top-18 left-1/2 -translate-x-1/2 w-full max-w-7xl bg-background text-foreground shadow-sm dark:shadow-slate-700 z-40",
+                    { hAuto: activeNavId }
                 )}
                 onMouseEnter={handleMouseEnterSubMenu}
                 onMouseLeave={handleMouseLeaveSubMenu}
