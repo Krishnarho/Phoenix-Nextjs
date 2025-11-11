@@ -2,17 +2,17 @@
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
-import { NavLink } from "@/constants/nav-links";
+import { MenuItem } from "@/constants/menu-items";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 
-type NavLinkProps = {
-    navLinks: NavLink[];
+type MenuItemsProps = {
+    menuItems: MenuItem[];
 };
 
-function MobileNav({ navLinks }: NavLinkProps) {
+function MobileNav({ menuItems }: MenuItemsProps) {
     const [open, setOpen] = useState(false);
     //const [activeAccordion, setActiveAccordion] = useState<string | "">("");
 
@@ -38,8 +38,8 @@ function MobileNav({ navLinks }: NavLinkProps) {
                             //     setActiveAccordion(value);
                             // }}
                         >
-                            {navLinks.map((link, index) => {
-                                const hasSubMenu = link.subNav && link.subNav.length > 0;
+                            {menuItems.map((link, index) => {
+                                const hasSubMenu = link.subMenu && link.subMenu.length > 0;
                                 return (
                                     <motion.div
                                         key={link.id}
@@ -58,38 +58,41 @@ function MobileNav({ navLinks }: NavLinkProps) {
                                                     {link.nav}
                                                 </AccordionTrigger>
                                                 <AccordionContent className="pl-4">
-                                                    {link.subNav?.map((sublink) => {
+                                                    {link.subMenu?.map((subMenuItem) => {
                                                         const hasNestedSubMenu =
-                                                            sublink.subSubNav && sublink.subSubNav.length > 0;
+                                                            subMenuItem.nestedSubMenu &&
+                                                            subMenuItem.nestedSubMenu.length > 0;
 
                                                         return hasNestedSubMenu ? (
-                                                            <Accordion key={sublink.nav} type="single" collapsible>
-                                                                <AccordionItem value={sublink.nav}>
+                                                            <Accordion key={subMenuItem.nav} type="single" collapsible>
+                                                                <AccordionItem value={subMenuItem.nav}>
                                                                     <AccordionTrigger className="text-md text-foreground">
-                                                                        {sublink.nav}
+                                                                        {subMenuItem.nav}
                                                                     </AccordionTrigger>
                                                                     <AccordionContent className="pl-4">
-                                                                        {sublink.subSubNav?.map((subSublink) => (
-                                                                            <Link
-                                                                                key={subSublink.nav}
-                                                                                href={subSublink.path}
-                                                                                className="block py-2 text-md text-foreground hover:text-primary"
-                                                                                onClick={() => setOpen(false)}
-                                                                            >
-                                                                                {subSublink.nav}
-                                                                            </Link>
-                                                                        ))}
+                                                                        {subMenuItem.nestedSubMenu?.map(
+                                                                            (nestedSubMenuItem) => (
+                                                                                <Link
+                                                                                    key={nestedSubMenuItem.nav}
+                                                                                    href={nestedSubMenuItem.path}
+                                                                                    className="block py-2 text-md text-foreground hover:text-primary"
+                                                                                    onClick={() => setOpen(false)}
+                                                                                >
+                                                                                    {nestedSubMenuItem.nav}
+                                                                                </Link>
+                                                                            )
+                                                                        )}
                                                                     </AccordionContent>
                                                                 </AccordionItem>
                                                             </Accordion>
                                                         ) : (
                                                             <Link
-                                                                key={sublink.nav}
-                                                                href={sublink.path}
+                                                                key={subMenuItem.nav}
+                                                                href={subMenuItem.path}
                                                                 className="block py-2 text-md text-foreground hover:text-primary"
                                                                 onClick={() => setOpen(false)}
                                                             >
-                                                                {sublink.nav}
+                                                                {subMenuItem.nav}
                                                             </Link>
                                                         );
                                                     })}

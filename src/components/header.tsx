@@ -4,7 +4,7 @@ import DesktopNav from "./desktop-nav";
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
 import ScrollHeader from "./scroll-header";
-import { navLinks } from "@/constants/nav-links";
+import { menuItems } from "@/constants/menu-items";
 
 import * as motion from "motion/react-client";
 
@@ -35,13 +35,13 @@ const Header = () => {
 
                 <div className="flex gap-3 items-center self-stretch">
                     {/* DESKTOP */}
-                    <DesktopNav navLinks={navLinks} />
+                    <DesktopNav menuItems={menuItems} />
 
                     {/* THEME */}
                     <ModeToggle />
 
                     {/* MOBILE */}
-                    <MobileNav navLinks={navLinks} />
+                    <MobileNav menuItems={menuItems} />
                 </div>
             </div>
         </ScrollHeader>

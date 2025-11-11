@@ -1,30 +1,30 @@
-type SubSubNav = { nav: string; path: string };
+type NestedSubMenu = { nav: string; path: string };
 
-type SubNav = {
+type SubMenu = {
     nav: string;
     path: string;
-    subSubNav?: SubSubNav[];
+    nestedSubMenu?: NestedSubMenu[];
 };
 
-export type NavLink = {
+export type MenuItem = {
     id: string;
     nav: string;
     path: string;
-    subNav?: SubNav[];
+    subMenu?: SubMenu[];
 };
 
-export const navLinks: NavLink[] = [
+export const menuItems: MenuItem[] = [
     //{ id: "home", nav: "Home", path: "/" },
     {
         id: "home",
         nav: "Company",
         path: "/",
-        subNav: [
+        subMenu: [
             { nav: "Home Page", path: "/" },
             {
                 nav: "About Us",
                 path: "/about-phoenix-global#about",
-                subSubNav: [
+                nestedSubMenu: [
                     { nav: "About Company", path: "/about-phoenix-global#introduction" },
                     { nav: "Our Vision", path: "/about-phoenix-global#vision" },
                     { nav: "Our Mission", path: "/about-phoenix-global#mission" },
@@ -36,10 +36,10 @@ export const navLinks: NavLink[] = [
     },
     { id: "products", nav: "Products", path: "#" },
     {
-        id: "i&a",
+        id: "ia",
         nav: "Industries & Applications",
         path: "#",
-        subNav: [
+        subMenu: [
             { nav: "Energy", path: "#" },
             { nav: "Oil & Gas", path: "#" },
             { nav: "Industry", path: "#" },
