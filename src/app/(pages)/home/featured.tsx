@@ -55,15 +55,13 @@ function Featured() {
                                 className="grid grid-rows-subgrid place-items-center gap-4 row-span-4 border border-ring rounded-lg hover:shadow-md hover:shadow-orange-600 hover:scale-105 bg-secondary transition-transform duration-300"
                                 key={product.id}
                             >
-                                <div className="relative w-full h-[12.5rem]">
-                                    <Image
-                                        src={product.image}
-                                        alt={product.title}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="object-cover rounded-t-lg"
-                                    />
-                                </div>
+                                <Image
+                                    src={product.image}
+                                    alt={product.title}
+                                    width={400}
+                                    height={300}
+                                    className="w-full h-[12.5rem] object-cover rounded-t-lg"
+                                />
                                 <h3 className="text-lg font-semibold px-4">{product.title}</h3>
                                 <p className="place-self-start px-4 text-sm line-clamp-3">{product.para}</p>
                                 <Button

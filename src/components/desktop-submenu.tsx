@@ -24,7 +24,7 @@ function DesktopSubmenu({
             const timeout = setTimeout(() => {
                 setVisible(false);
                 setDisplayedItem(null);
-            }, 500); // same as CSS duration
+            }, 300); // same as CSS duration
             return () => clearTimeout(timeout);
         }
     }, [activeMenu]);
@@ -102,42 +102,55 @@ function DesktopSubmenu({
                             </p>
                         </div>
                         <div className="w-1/2 grid grid-cols-2 gap-4 link-underline">
-                            <Link href="#">
-                                <div className="relative w-full mb-4 h-36">
-                                    <Image
-                                        src="/images/products/energy.jpg"
-                                        alt=""
-                                        fill
-                                        sizes="(min-width: 768px) 20vw, 100vw"
-                                        className="object-cover w-full h-auto"
-                                    />
-                                </div>
-                                <h3 className="font-semibold text-center">Energy</h3>
-                            </Link>
-                            <Link href="#">
-                                <div className="relative w-full mb-4 h-36">
-                                    <Image
-                                        src="/images/products/industry.jpg"
-                                        alt=""
-                                        fill
-                                        sizes="(min-width: 768px) 20vw, 100vw"
-                                        className="object-cover w-full h-auto"
-                                    />
-                                </div>
-                                <h3 className="font-semibold text-center">Industries</h3>
-                            </Link>
-                            <Link href="#">
-                                <div className="relative w-full mb-4 h-36">
-                                    <Image
-                                        src="/images/products/oil-gas.jpg"
-                                        alt=""
-                                        fill
-                                        sizes="(min-width: 768px) 20vw, 100vw"
-                                        className="object-cover w-full h-auto"
-                                    />
-                                </div>
-                                <h3 className="font-semibold text-center">Oil & Gas</h3>
-                            </Link>
+                            {navItemObj?.subMenu?.map((item) => (
+                                <Link href="#" key={item.nav} className="grid grid-rows-[auto_1fr] gap-3">
+                                    {item.imageUrl && (
+                                        <Image
+                                            src={item.imageUrl}
+                                            alt={item.nav}
+                                            width={400}
+                                            height={300}
+                                            className="w-full h-36 object-cover"
+                                        />
+                                    )}
+
+                                    <h3 className="font-semibold text-center">{item.nav}</h3>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                )}
+                {displayedItem === "products" && (
+                    <div className="p-8 flex gap-16">
+                        <div className="w-1/2">
+                            <p>
+                                Our featured product offerings in the electricity manufacturing sector focus on advanced
+                                power distribution solutions designed to enhance efficiency, safety, and reliability
+                                across utility and industrial applications. We specialize in high-performance cables &
+                                cables accessories, distribution boards, meters, switches and ACSR/AAAC/AL.59 conductors
+                                engineered to meet the evolving demands of modern power infrastructure. Built to
+                                withstand harsh operating environments, our products ensure optimal energy flow and
+                                minimal downtime. With a commitment to innovation and compliance with global standards,
+                                we provide scalable solutions that support smart grid integration and sustainable energy
+                                distribution.
+                            </p>
+                        </div>
+                        <div className="w-1/2 grid grid-cols-3 gap-4 link-underline">
+                            {navItemObj?.subMenu?.map((item) => (
+                                <Link href="#" key={item.nav} className="grid grid-rows-[auto_1fr] gap-3">
+                                    {item.imageUrl && (
+                                        <Image
+                                            src={item.imageUrl}
+                                            alt={item.nav}
+                                            width={400}
+                                            height={300}
+                                            className="w-full h-28 object-cover"
+                                        />
+                                    )}
+
+                                    <h3 className="font-semibold text-center">{item.nav}</h3>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 )}

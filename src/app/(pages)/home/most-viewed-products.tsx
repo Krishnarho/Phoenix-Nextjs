@@ -50,24 +50,26 @@ function MostViewedProducts() {
                                 .filter((item) => item.category === "products")
                                 .map((product) => (
                                     <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/3 pl-4">
-                                        <div className="relative w-full h-[12.5rem]">
+                                        <div className="overflow-clip group/scale">
                                             <Image
                                                 src={product.image}
                                                 alt={product.title}
-                                                fill
-                                                sizes="(max-width: 768px) 100vw, 50vw"
-                                                className="object-cover"
+                                                width={400}
+                                                height={300}
+                                                className="w-full h-[12.5rem] object-cover scale-100 group-hover/scale:scale-105 transition-transform duration-300 ease-in-out"
                                             />
-                                        </div>
-                                        <div className="bg-secondary flex flex-col gap-4 py-4">
-                                            <h3 className="text-lg font-semibold px-4">{product.title}</h3>
-                                            <p className="place-self-start px-4 text-sm line-clamp-2">{product.para}</p>
-                                            <Button asChild variant="ghost" className="w-fit hover:text-orange-500">
-                                                <Link href={product.link} className="group">
-                                                    Learn More{" "}
-                                                    <ArrowBigRight className="group-hover:animate-caret-blink" />
-                                                </Link>
-                                            </Button>
+                                            <div className="bg-secondary flex flex-col gap-4 py-4">
+                                                <h3 className="text-lg font-semibold px-4">{product.title}</h3>
+                                                <p className="place-self-start px-4 text-sm line-clamp-2">
+                                                    {product.para}
+                                                </p>
+                                                <Button asChild variant="ghost" className="w-fit hover:text-orange-500">
+                                                    <Link href={product.link} className="group/link">
+                                                        Learn More{" "}
+                                                        <ArrowBigRight className="group-hover/link:animate-caret-blink" />
+                                                    </Link>
+                                                </Button>
+                                            </div>
                                         </div>
                                     </CarouselItem>
                                 ))}
@@ -92,7 +94,7 @@ function MostViewedProducts() {
                                     //disabled={current === 0}
                                     className={cn(
                                         "bg-background text-foreground rounded-md hover:border-orange-600 hover:bg-orange-600 hover:text-slate-100 transition-colors duration-300 ease-in-out",
-                                        { "opacity-50": current === 0 }
+                                        { "opacity-50": current === 0 },
                                     )}
                                 >
                                     <MoveLeft />
@@ -112,7 +114,7 @@ function MostViewedProducts() {
                                     //disabled={current === count - 1}
                                     className={cn(
                                         "bg-background text-foreground rounded-md hover:border-orange-600 hover:bg-orange-600 hover:text-slate-100 transition-colors duration-300 ease-in-out",
-                                        { "opacity-50": current === count - 1 }
+                                        { "opacity-50": current === count - 1 },
                                     )}
                                 >
                                     <MoveRight />

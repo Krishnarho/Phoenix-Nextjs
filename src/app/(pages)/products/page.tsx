@@ -3,7 +3,7 @@ import "./style.css";
 function ProductPage() {
     return (
         <>
-            <section className="border-b border-muted-foreground/20">
+            <section className="border-b border-muted-foreground/20 pt-20">
                 <div className="container px-0 md:px-10 lg:px-20 mask-lines border-x border-muted-foreground/20">
                     <div className="w-full bg-background p-4 border-x border-muted-foreground/20">
                         <h1>Products</h1>

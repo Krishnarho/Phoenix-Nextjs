@@ -21,12 +21,12 @@ function DesktopNav({ menuItems }: MenuItemsProps) {
     const handleMouseEnter = (menu: string | undefined) => {
         if (!menu) return setActiveMenu(null);
         if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
-        hoverTimeout.current = setTimeout(() => setActiveMenu(menu), 200);
+        hoverTimeout.current = setTimeout(() => setActiveMenu(menu), 300);
     };
 
     const handleMouseLeave = () => {
         if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
-        hoverTimeout.current = setTimeout(() => setActiveMenu(null), 50);
+        hoverTimeout.current = setTimeout(() => setActiveMenu(null), 0);
     };
 
     return (
@@ -36,6 +36,7 @@ function DesktopNav({ menuItems }: MenuItemsProps) {
                     {menuItems.map((link, index) => {
                         const isActive =
                             pathName === link.path || (pathName.startsWith(link.path) && link.path !== "/");
+
                         return (
                             <li key={link.id} className="relative h-full">
                                 <motion.div
@@ -58,14 +59,14 @@ function DesktopNav({ menuItems }: MenuItemsProps) {
                                             {
                                                 "text-orange-500": isActive,
                                                 "ml-48": index === 0,
-                                            }
+                                            },
                                         )}
                                     >
                                         {link.nav}
                                         <span
                                             className={cn(
                                                 "w-0 h-0.5 group-hover:w-full bg-orange-500 transition-all self-start duration-300",
-                                                { "w-full": isActive }
+                                                { "w-full": isActive },
                                             )}
                                         ></span>
                                     </Link>
@@ -83,15 +84,15 @@ function DesktopNav({ menuItems }: MenuItemsProps) {
                                 onMouseEnter={() => handleMouseEnter(item.id)}
                                 onMouseLeave={handleMouseLeave}
                                 className={cn(
-                                    "fixed top-18 left-1/2 -translate-x-1/2 w-full max-w-7xl bg-background text-foreground shadow-sm dark:shadow-slate-700 grid grid-rows-[0fr] transition-[grid-template-rows_opacity] duration-500 ease-in-out opacity-0 pointer-events-none overflow-hidden",
+                                    "fixed top-18 left-1/2 -translate-x-1/2 w-full max-w-7xl bg-background text-foreground shadow-sm dark:shadow-slate-700 grid grid-rows-[0fr] transition-[grid-template-rows_opacity] duration-300 ease-in-out opacity-0 pointer-events-none overflow-hidden",
                                     {
                                         "grid-rows-[1fr] opacity-100 pointer-events-auto": activeMenu === item.id,
-                                    }
+                                    },
                                 )}
                             >
                                 <DesktopSubmenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
                             </div>
-                        )
+                        ),
                 )}
             </nav>
         </>
