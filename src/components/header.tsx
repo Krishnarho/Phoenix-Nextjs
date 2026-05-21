@@ -26,7 +26,7 @@ const Header = () => {
                         <Image src="/images/logo.png" width={56} height={56} alt="logo" className="logo" />
                         <div>
                             <h2 className="text-orange-600 font-bold text-xl sm:text-2xl tracking-wider">
-                                phoenix global
+                                Phoenix Global
                             </h2>
                             <p className="uppercase text-bold text-center text-xs tracking-wider">Power your world</p>
                         </div>

@@ -25,21 +25,8 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={`${poppins.className} antialiased`}>
-                {/* Immediate loader */}
-                {/* <div
-                    suppressHydrationWarning
-                    id="initial-loader"
-                    className="fixed inset-0 w-full h-full bg-background flex items-center justify-center z-[9999]"
-                >
-                    <div className="w-14 h-14 bg-[url('/images/logo.png')] animate-spin"></div>
-                </div> */}
-
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                    <div
-                        className="w-full min-h-screen flex justify-center"
-                        // id="app-content"
-                        // style={{ display: "none" }}
-                    >
+                    <div className="w-full min-h-screen flex justify-center">
                         <div className="w-full">
                             {/* <TopContact /> */}
                             <Header />
@@ -49,16 +36,6 @@ export default function RootLayout({
                     </div>
                 </ThemeProvider>
                 <TailwindIndicator />
-                {/* <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-              window.addEventListener('load', function () {
-                document.getElementById('initial-loader').style.display = 'none';
-                document.getElementById('app-content').style.display = 'block';
-              });
-            `,
-                    }}
-                /> */}
             </body>
         </html>
     );

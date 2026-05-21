@@ -116,8 +116,8 @@ const AboutPage = () => {
                         <h3 className="text-2xl md:text-3xl mb-4">Our Vision</h3>
                         <ul className="space-y-4">
                             <li>Expand across under-penetrated regions.</li>
-                            <li>Diversify into Data Centers and Robotics</li>
-                            <li>Enhance digital capabilities and warehousing</li>
+                            <li>Diversify into Data Centers.</li>
+                            <li>Enhance digital capabilities and warehousing.</li>
                         </ul>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ const AboutPage = () => {
                     id="mission"
                     className="container flex flex-col md:flex-row [&>*]:w-full md:[&>*]:w-1/2 pt-4 md:pt-0 justify-end autoShow"
                 >
-                    <div className="shadow-2xl md:shadow-[-4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[-4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-mr-[10%] z-10 bg-background md:text-right">
+                    <div className="shadow-2xl md:shadow-[-4px_-4px_10px_rgba(0,0,0,0.25)] dark:shadow-[-4px_-4px_10px_rgba(255,255,255,0.25)] p-4 self-end md:-mr-[10%] z-10 bg-background">
                         <h3 className="text-2xl md:text-3xl mb-4">Our Mission</h3>
                         <ul className="space-y-4">
                             <li>Enhance customer satisfaction to the highest level in all businesses.</li>
