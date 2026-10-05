@@ -5,6 +5,7 @@ import { ThemeProvider } from "./provider/theme-provider";
 import Header from "@/components/header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import Footer from "@/components/footer";
+import RevealObserver from "@/components/RealObserver";
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
                         <div className="w-full">
                             {/* <TopContact /> */}
                             <Header />
+                            <RevealObserver />
                             {children}
                             <Footer />
                         </div>

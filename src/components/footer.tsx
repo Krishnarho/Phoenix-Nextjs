@@ -6,7 +6,7 @@ import { SendIcon } from "lucide-react";
 function Footer() {
     return (
         <section id="footer">
-            <footer className="relative w-full text-white">
+            <footer className="relative w-full text-white z-50">
                 <div className="absolute inset-0 bg-[url('/images/footer-bg.jpg')] bg-cover bg-center z-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 via-orange-800/40 to-transparent z-10" />
 

@@ -21,7 +21,7 @@ export default function ScrollHeader({ children }: { children: React.ReactNode }
                 "fixed top-0 left-0 w-full z-50 border-b border-slate-300 transition-all duration-300 text-white",
                 {
                     "bg-background text-primary": scrolled,
-                }
+                },
             )}
         >
             {children}

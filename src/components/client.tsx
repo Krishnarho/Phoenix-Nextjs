@@ -90,7 +90,7 @@ export default function ClientScroll() {
                             {[...brands, ...brands].map((brand, index) => (
                                 <div
                                     key={index}
-                                    className={`${spaceGrotesk.className} mx-10 text-4xl font-semibold text-stone-600 transition-opacity duration-300 hover:text-stone-800 border-4 border-orange-600 rounded-2xl p-2 hover:border-orange-400`}
+                                    className={`${spaceGrotesk.className} mx-5 sm:mx-10 text-lg sm:text-4xl lg:text-6xl font-semibold text-stone-600 transition-opacity duration-300 hover:text-stone-800 border-4 border-orange-600 rounded-2xl p-3.5 hover:border-orange-400`}
                                 >
                                     {brand}
                                 </div>
