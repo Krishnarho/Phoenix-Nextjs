@@ -180,7 +180,7 @@
 .animate-marquee:hover {
     animation-play-state: paused;
 }
-/* CSS for Intersection Observer auto show animation */
+/* CSS for Intersection Observer autoShow animation */
 .autoShow {
     opacity: 0;
     transform: translateY(80px);
