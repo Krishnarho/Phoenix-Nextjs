@@ -50,10 +50,11 @@ function Featured() {
                 <div className="grid-products">
                     {featuredProducts
                         .filter((item) => item.category === featuredItem)
-                        .map((product) => (
+                        .map((product, index) => (
                             <div
-                                className="grid grid-rows-subgrid place-items-center gap-4 row-span-4 border border-ring rounded-lg hover:shadow-md hover:shadow-orange-600 hover:scale-105 bg-secondary transition-transform duration-300"
                                 key={product.id}
+                                className="autoShow staggered grid-rows-subgrid place-items-center gap-4 row-span-4 border border-ring rounded-lg hover:shadow-md hover:shadow-orange-600 hover:scale-105 bg-secondary transition-transform duration-300"
+                                style={{ "--i": index }} /* Passes the index dynamically as a CSS value */
                             >
                                 <Image
                                     src={product.image}

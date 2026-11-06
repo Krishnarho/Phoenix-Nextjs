@@ -48,8 +48,12 @@ function MostViewedProducts() {
                         <CarouselContent className="-ml-4">
                             {featuredProducts
                                 .filter((item) => item.category === "products")
-                                .map((product) => (
-                                    <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/3 pl-4">
+                                .map((product, index) => (
+                                    <CarouselItem
+                                        key={product.id}
+                                        className="autoShow staggered md:basis-1/2 lg:basis-1/3 pl-4"
+                                        style={{ "--i": index }} /* Passes the index dynamically as a CSS value */
+                                    >
                                         <div className="overflow-clip group/scale">
                                             <Image
                                                 src={product.image}

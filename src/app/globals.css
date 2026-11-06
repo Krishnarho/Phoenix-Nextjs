@@ -180,28 +180,26 @@
 .animate-marquee:hover {
     animation-play-state: paused;
 }
-
+/* CSS for Intersection Observer auto show animation */
 .autoShow {
     opacity: 0;
     transform: translateY(80px);
     will-change: transform, opacity;
     backface-visibility: hidden;
+    /* This is later code */
+    transition:
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.8s ease-out;
 }
 
 .autoShow.visible {
-    animation: autoShowAnimation 0.8s ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes autoShowAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(80px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Read the dynamic variable '--i' directly in the transition configuration */
+.autoShow.staggered {
+    transition-delay: calc(var(--i) * 100ms);
 }
 
 @media (prefers-reduced-motion: reduce) {
