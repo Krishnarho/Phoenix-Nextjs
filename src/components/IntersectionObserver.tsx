@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-export default function AnimationObserver() {
+export default function IntersectionObserverWrapper() {
     const pathname = usePathname();
 
     useEffect(() => {
