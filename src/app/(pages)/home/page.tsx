@@ -17,17 +17,17 @@ function Home() {
                 className="px-2 py-3 lg:py-16 bg-linear-[45deg,var(--background)_50%,oklch(64.6%_0.222_41.116)_50%] min-h-screen grid place-items-center"
             >
                 <div className="container flex gap-4 flex-col lg:flex-row [&>*]:w-full lg:[&>*]:w-1/2">
-                    <div className="flex justify-center items-start">
+                    <div className="flex justify-center items-center">
                         <Image
-                            src="/images/about.jpg"
+                            src="/images/about-us.webp"
                             alt="About Phoenix Global"
                             width={800}
                             height={600}
                             sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
-                            className="object-cover  max-h-72 md:max-h-96 object-ceter"
+                            className="object-contain  max-h-72 md:max-h-96 object-ceter"
                         />
                     </div>
-                    <div className="flex flex-col gap-4">
+                    <div className="space-y-4">
                         <h1 className="autoShow text-[clamp(1.875rem,2.5vw,3rem)] mt-8 lg:mt-0 text-balance">
                             Welcome to Phoenix Global
                         </h1>
@@ -50,11 +50,9 @@ function Home() {
 
                         <Button
                             asChild
-                            className="rounded-none hover:bg-orange-600 hover:text-accent-foreground transition-colors ease-in duration-300 w-fit mt-4"
+                            className="rounded-md hover:bg-orange-600 hover:text-accent-foreground hover:-translate-y-0.5 transition-all ease-in duration-300 shadow-md shadow-accent-foreground"
                         >
-                            <Link href="/about-phoenix-global">
-                                <span className="animate-bounce">Learn More</span>
-                            </Link>
+                            <Link href="/about-phoenix-global">Learn More</Link>
                         </Button>
                     </div>
                 </div>
