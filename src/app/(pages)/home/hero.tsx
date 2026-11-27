@@ -39,7 +39,7 @@ export default function HeroSwiper() {
                         {activeIndex === index && (
                             <motion.div
                                 key={slide.id}
-                                className="text-white p-4 mx-2 sm:ml-18 space-y-4 bg-black/10 backdrop-blur rounded"
+                                className="text-white p-4 mx-2 sm:ml-18 space-y-4 bg-black/10 backdrop-blur-xs rounded"
                                 initial={{ opacity: 0, x: -350 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: 350 }}

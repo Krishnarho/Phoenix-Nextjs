@@ -51,16 +51,27 @@ const AboutPage = () => {
                     </Breadcrumb>
                 </div>
             </section>
-            <section id="introduction" className="px-2 py-8 lg:py-16">
-                <div className="container flex gap-4 flex-col lg:flex-row [&>*]:w-full lg:[&>*]:w-1/2">
-                    <div className="flex justify-center items-start">
+            <section
+                id="introduction"
+                className="px-2 grid [grid-template-areas:'stack'] place-items-center relative overflow-hidden"
+            >
+                <Image
+                    src="/images/about-cache.png"
+                    alt="About us"
+                    fill
+                    sizes="100vw"
+                    priority
+                    className="object-contain object-center [grid-area:stack] opacity-20"
+                />
+                <div className="container flex gap-4 flex-col lg:flex-row [&>*]:w-full lg:[&>*]:w-1/2 [grid-area:stack] py-8 lg:py-16">
+                    <div className="">
                         <Image
-                            src="/images/about.jpg"
+                            src="/images/about-us.webp"
                             alt=""
                             width={800}
                             height={600}
                             sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px, 50vw"
-                            className="object-cover max-h-72 md:max-h-96 object-ceter"
+                            className="object-contain max-h-72 md:max-h-96 place-self-start"
                         />
                     </div>
                     <div className="flex flex-col gap-4  mt-8 lg:mt-0">
